@@ -39,4 +39,31 @@ VALUES(
 INSERT INTO "Employees"
   ("FullName", "Salary", "JobPosition","PhoneExtension", "IsPartTime")
 VALUES(
-    'Jaime Tidewell', '23000', 'Busser', '0', 'Yes'); 
+    'Jaime Tidewell', '23000', 'Busser', '0', 'Yes');
+
+
+select *
+from "Employees";
+
+
+select "FullName", "PhoneExtension"
+from "Employees"
+where "IsPartTime" = 'No';
+
+
+INSERT INTO "Employees"
+  ("FullName", "Salary", "JobPosition","PhoneExtension", "IsPartTime")
+VALUES(
+    'Steven Jobs', '450', 'Software Developer', '398', 'Yes');
+
+
+update "Employees" set "Salary" = '500' where "JobPosition" = 'Cook';
+
+
+delete from "Employees" where "FullName" like '%Lazy Larry%';
+
+
+alter table "Employees" add column "ParkingSpot" varchar
+(10);                                       
+
+
